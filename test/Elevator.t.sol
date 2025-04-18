@@ -2,8 +2,8 @@
 pragma solidity ^0.8.13;
 
 import {Test, console} from "forge-std/Test.sol";
-import {Delegate} from "../src/Delegate.sol";
-import {Elevator} from "../src/Elevator.sol";
+import {Delegate} from "../src/Elevator/Delegate.sol";
+import {Elevator} from "../src/Elevator/Elevator.sol";
 
 contract DelegateTest is Test {
     Delegate public delegate;

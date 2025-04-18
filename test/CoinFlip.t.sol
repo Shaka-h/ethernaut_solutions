@@ -2,8 +2,8 @@
 pragma solidity ^0.8.13;
 
 import {Test, console} from "forge-std/Test.sol";
-import {Guess} from "../src/Guess.sol";
-import {CoinFlip} from "../src/CoinFlip.sol";
+import {Guess} from "../src/Coinflip/Guess.sol";
+import {CoinFlip} from "../src/Coinflip/CoinFlip.sol";
 
 
 contract CounterTest is Test {

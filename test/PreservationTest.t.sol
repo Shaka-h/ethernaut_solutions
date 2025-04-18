@@ -2,9 +2,9 @@
 pragma solidity ^0.8.13;
 
 import "forge-std/Test.sol";
-import "../src/Preservation.sol";
-import "../src/Delegate.sol";
-import "../script/DeployScript.s.sol";
+import "../src/Preservation/Preservation.sol";
+import "../src/Preservation/Delegate.sol";
+import "../script/Preservation/DeployScript.s.sol";
 
 contract PreservationTest is Test {
     DeployScript public deployScript;

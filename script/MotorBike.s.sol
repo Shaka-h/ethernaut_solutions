@@ -3,7 +3,7 @@
 pragma solidity ^0.8.1;
 
 import {Script, console2} from "forge-std/Script.sol";
-import {Attack} from "../src/Attack.sol";
+import {Attack} from "../src/MotorBike/Attack.sol";
 
 contract AttackScript is Script {
 

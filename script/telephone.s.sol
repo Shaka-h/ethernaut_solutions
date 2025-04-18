@@ -2,7 +2,7 @@
 pragma solidity ^0.6.0;
 
 import {Script, console2} from "forge-std/Script.sol";
-import {Telephone} from "../src/Telephone.sol";
+import {Telephone} from "../src/Telephone/Telephone.sol";
 import {IntermediateContract} from "../src/IntermediateContract.sol";
 
 contract DeployIntermediate is Script {

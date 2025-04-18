@@ -2,7 +2,7 @@
 pragma solidity ^0.8.13;
 
 import {Test, console} from "forge-std/Test.sol";
-import {DeployAttackScript} from "../script/Deploy.s.sol";
+import {DeployAttackScript} from "../script/Dex/Deploy.s.sol";
 import {Dex} from "../src/Dex.sol";
 import {Dex} from "../src/Dex.sol";
 import {SwappableToken} from "../src/Dex.sol";

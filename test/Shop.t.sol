@@ -1,9 +1,9 @@
 // SPDX-License-Identifier: MIT
 pragma solidity ^0.8.0;
 
-import {Shop} from "../src/Shop.sol";
-import {Attacker} from "../src/ShopAttacker.sol";
-import {DeployAttackScript} from "../script/Deploy.s.sol";
+import {Shop} from "../src/shop/Shop.sol";
+import {Attacker} from "../src/shop/ShopAttacker.sol";
+import {DeployAttackScript} from "../script/shop/Deploy.s.sol";
 import {Test, console} from "forge-std/Test.sol";
 
 // name contract diffeernt to Buy

@@ -2,9 +2,9 @@
 pragma solidity ^0.8.0;
 
 import "@openzeppelin/contracts/utils/math/SafeMath.sol";
-import {Reentrance} from "../src/Reentrance.sol";
-import {ReentranceAttack} from "../src/ReentranceAttack.sol";
-import {DeployAttackScript} from "../script/DeployAttack.s.sol";
+import {Reentrance} from "../src/Reentrancy/Reentrance.sol";
+import {ReentranceAttack} from "../src/Reentrancy/ReentranceAttack.sol";
+import {DeployAttackScript} from "../script/Reentrancy/DeployAttack.s.sol";
 import {Test, console} from "forge-std/Test.sol";
 
 // Attacker calles victim and victim calls external contract which begina a loop between external and victim

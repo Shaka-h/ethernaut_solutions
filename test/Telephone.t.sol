@@ -2,8 +2,8 @@
 pragma solidity ^0.6.0;
 
 import {Test, console2} from "forge-std/Test.sol";
-import {Telephone} from "../src/Telephone.sol";
-import {IntermediateContract} from "../src/IntermediateContract.sol";
+import {Telephone} from "../src/Telephone/Telephone.sol";
+import {IntermediateContract} from "../src/Telephone/IntermediateContract.sol";
 
 // Mock Telephone contract to simulate ownership change
 contract MockTelephone is ITelephone {

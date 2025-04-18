@@ -2,8 +2,8 @@
 pragma solidity ^0.8.13;
 
 import {Script, console} from "forge-std/Script.sol";
-import {DenialAttack} from "../src/DenialAttack.sol";
-import {Denial} from "../src/Denial.sol";
+import {DenialAttack} from "../src/Denial/DenialAttack.sol";
+import {Denial} from "../src/Denial/Denial.sol";
 
 contract DenialScript is Script {
     // Denial public denial;

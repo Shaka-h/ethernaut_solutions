@@ -40,7 +40,7 @@
 pragma solidity ^0.8.20;
 
 import {Script, console2} from "forge-std/Script.sol";
-import {Attack} from "../src/Attack.sol";
+import {Attack} from "../src/GatekeeperThree/Attack.sol";
 
 contract AttackScript is Script {
     address gateKeepperThree = 0x7300dAF2239f0591De4BF83a444021D8171a57f8;

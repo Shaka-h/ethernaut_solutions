@@ -2,8 +2,8 @@
 pragma solidity ^0.8.13;
 
 import {Script, console} from "forge-std/Script.sol";
-import {GudSama} from "../src/GudSama.sol";
-import { GoodSamaritan, Coin, Wallet} from "../src/GoodSamaritan.sol";
+import {GudSama} from "../src/GoodSamaritan/GudSama.sol";
+import { GoodSamaritan, Coin, Wallet} from "../src/GoodSamaritan/GoodSamaritan.sol";
 
 contract GudSamaritanScript is Script {
     GudSama public gudSama;
