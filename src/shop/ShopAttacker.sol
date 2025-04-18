@@ -1,7 +1,7 @@
 
 // SPDX-License-Identifier: MIT
 pragma solidity ^0.8.0;
-import {Shop} from "../src/Shop.sol";
+import {Shop} from "./Shop.sol";
 
 contract Attacker {
     Shop shop;

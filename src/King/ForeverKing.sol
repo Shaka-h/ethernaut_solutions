@@ -1,7 +1,7 @@
 // SPDX-License-Identifier: MIT
 pragma solidity ^0.8.0;
 
-import {King} from "../src/King.sol";
+import {King} from "./King.sol";
 
 contract ForeverKing {
     King king;

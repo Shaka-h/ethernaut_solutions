@@ -1,7 +1,7 @@
 // SPDX-License-Identifier: MIT
 pragma solidity ^0.8.0;
 
-import {Elevator} from "../src/Elevator.sol";
+import {Elevator} from "./Elevator.sol";
 
 contract Delegate {
     Elevator elevator;

