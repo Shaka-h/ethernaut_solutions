@@ -102,3 +102,6 @@ attack-Telephone:
 	
 attack-Fallback:
 	forge script script/Fallback.s.sol:FallbackScript --rpc-url $(SEPOLIA_RPC_URL) --account defaultKey --broadcast --verify --etherscan-api-key $(ETHERSCAN_API_KEY) -vvvv
+
+attack-Token:
+	forge script script/Token.s.sol:TokenScript --rpc-url $(SEPOLIA_RPC_URL) --account defaultKey --broadcast --verify --etherscan-api-key $(ETHERSCAN_API_KEY) -vvvv
