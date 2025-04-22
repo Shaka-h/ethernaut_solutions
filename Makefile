@@ -105,3 +105,6 @@ attack-Fallback:
 
 attack-Token:
 	forge script script/Token.s.sol:TokenScript --rpc-url $(SEPOLIA_RPC_URL) --account defaultKey --broadcast --verify --etherscan-api-key $(ETHERSCAN_API_KEY) -vvvv
+
+attack-Delegation:
+	forge script script/Delegation.s.sol:DelegationScript --rpc-url $(SEPOLIA_RPC_URL) --account defaultKey --broadcast --verify --etherscan-api-key $(ETHERSCAN_API_KEY) -vvvv
