@@ -108,3 +108,6 @@ attack-Token:
 
 attack-Delegation:
 	forge script script/Delegation.s.sol:DelegationScript --rpc-url $(SEPOLIA_RPC_URL) --account defaultKey --broadcast --verify --etherscan-api-key $(ETHERSCAN_API_KEY) -vvvv
+
+attack-Vault:
+	forge script script/Vault.s.sol:VaultScript --rpc-url $(SEPOLIA_RPC_URL) --account defaultKey --broadcast --verify --etherscan-api-key $(ETHERSCAN_API_KEY) -vvvv

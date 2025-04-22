@@ -2,9 +2,9 @@
 pragma solidity ^0.8.0;
 
 import {Script, console} from "forge-std/Script.sol";
-import {Force} from "../src/Force.sol";
-import {Attack} from "../src/Attack.sol";
-import {DeployAttackScript} from "../script/DeployAttack.s.sol";
+import {Force} from "../../src/Force/Force.sol";
+import {Attack} from "../../src/Force/Attack.sol";
+import {DeployAttackScript} from "./DeployAttack.s.sol";
 
 contract AttackScript is Script {
     DeployAttackScript public deployAttackScript;
