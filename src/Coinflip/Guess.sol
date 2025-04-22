@@ -22,4 +22,5 @@ contract Guess {
 
         return coinFlipContract.flip(side);
     }
+
 }
